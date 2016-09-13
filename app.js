@@ -1,16 +1,6 @@
 var express = require('express');
 var app = express();
-
-var middleware = {
-	requireAuthnetication: function(req, res, next){
-		console.log("Login Success!!")
-		next()
-	},
-	loger : function(req, res, next){
-		console.log(req.method);
-		next();
-	}
-}
+var middleware = require('./middleware.js');
 
 app.use(middleware.requireAuthnetication)
 app.use(middleware.loger)
