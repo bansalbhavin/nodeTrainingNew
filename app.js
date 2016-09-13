@@ -12,8 +12,8 @@ var middleware = {
 	}
 }
 
-//app.use(middleware.requireAuthnetication)
-//app.use(middleware.loger)
+app.use(middleware.requireAuthnetication)
+app.use(middleware.loger)
 
 
 app.get('/', function(req, res){
